@@ -1,0 +1,39 @@
+<div id="accordion">
+    <div class="card" >
+      <div class="card-header" (click)="showContent=!showContent">
+        <a class="card-link"  href="javascript:void(0);">
+          LIVE CRYPTO
+        </a>
+        <small class="float-sm-right"><button type="button" class="btn btn-sm btn-primary">Add</button></small>
+      </div>
+<div class="card m-2 zero-border jumbotron" *ngIf="showContent">
+    <div class="card-body">
+         <div class="col-md-3 offset-md-4">
+          <form [formGroup]="cryptoCurrencyAddForm" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                        <label>Currency Name</label>
+                        <input type="text" formControlName="currencyName" class="form-control" 
+                        [ngClass]="{ 'is-invalid': submitted && fc.currencyName.errors }" />
+                        <div *ngIf="submitted && fc.currencyName.errors" class="invalid-feedback">
+                            <div *ngIf="fc.currencyName.errors.required">Currency Name is required</div>
+                        </div>
+                  </div>
+                  <div class="form-group">
+                        <label>Price Value</label>
+                        <input type="number"  min="0.00" formControlName="currencyValue" class="form-control" 
+                        [ngClass]="{ 'is-invalid': submitted && fc.currencyValue.errors }" />
+
+                        <div *ngIf="submitted && fc.currencyValue.errors" class="invalid-feedback">
+                            <div *ngIf="fc.currencyValue.errors.required">Price Value is required</div>
+                        </div>
+                    </div>
+                     <div class="text-center">
+                      <button class="btn btn-primary mr-1">Save</button>
+                      <button class="btn btn-secondary" type="reset" (click)="onReset()">Clear</button>
+                   </div>
+            </form>
+    </div>
+    </div>
+</div>      
+</div>
+</div>

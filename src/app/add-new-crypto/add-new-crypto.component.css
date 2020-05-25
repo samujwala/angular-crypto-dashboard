@@ -1,0 +1,16 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+h3,p{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  text-align: left; 
+  font-size: 16px;
+}
+label, button{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+}
+.zero-border{
+  border: 0px;
+}
+.jumbotron {
+    padding: 2rem 2rem;
+}

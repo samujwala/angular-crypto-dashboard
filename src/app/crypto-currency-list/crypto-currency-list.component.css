@@ -1,0 +1,26 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+h3,p{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  text-align: left; 
+  font-size: 16px;
+}
+p{
+  font-size: 16px;
+  color: darkblue;
+}
+.zero-border{
+  border: 0px;
+}
+.jumbotron {
+    padding: 2rem 2rem;
+}
+.blocks span{
+  text-align: right;
+  display: block;
+}
+.remove{
+  color: black;
+}
+.card-body{
+overflow-y: auto;
+}

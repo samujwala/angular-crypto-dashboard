@@ -1,0 +1,24 @@
+ 
+<div class="card-header">
+        <a class="card-link"  href="javascript:void(0);">
+         ASSETS
+        </a>
+      </div>
+ <div class="card m-2 zero-border jumbotron" [ngStyle]="{height:containerHeight}">
+   
+      <div class="card-body">
+          <div class="col-md-6 offset-md-3">
+            <div class="container">
+              <div class="card-columns">
+                <div class="card  btn-primary" *ngFor="let cur of cryptoCurrencyList">
+                  <div class="card-body card bg-light text-dark blocks">
+                    <h3><b>{{cur.name | titlecase}}</b></h3>
+                    <p>{{cur.priceUsd | number}} <b>$</b></p>
+                    <span (click)="removeItem(cur.name)" class="remove">&#10006;</span>
+                  </div>
+                </div>
+    </div>
+  </div>
+      </div>
+      </div>
+  </div>   
