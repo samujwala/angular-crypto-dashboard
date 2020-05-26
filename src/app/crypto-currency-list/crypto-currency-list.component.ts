@@ -1,8 +1,6 @@
 import { Component, OnInit,HostListener  } from '@angular/core';
 import { ICryptoCurrency } from '../crypto-currency';
 import { CryptoCurrencyService } from '../crypto-currency.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ContainerHeightDirective } from './container-height.directive';
 
 @Component({
   selector: 'app-crypto-currency-list',
